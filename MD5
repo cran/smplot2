@@ -1,6 +1,6 @@
-9cfd00886a9c61583e7c0fd11cb51d3e *DESCRIPTION
+23b170ba11b8581b0a274cdf15a873bb *DESCRIPTION
 b9886e5b5a7cc086c83aacd38e5ab70f *NAMESPACE
-45ac4f56f1c7de220e89759e4caedfd2 *NEWS.md
+f2a2e2690c2e9cd5a9676856a78146fd *NEWS.md
 f038078e2cb3efbdb412dfd39a91571b *R/attach.R
 9066f55230265a2160f4adfafc00068d *R/sm_add_arrow.R
 3f2078084a81fc773ed99998a7e66b15 *R/sm_add_legend.R
@@ -36,7 +36,7 @@ ed9e14928fdf8894126dacfb7e957214 *R/sm_palette.R
 37ef9e80122c0d35764a63506122bf41 *R/sm_plot_clean.R
 7511babe62ac95e3b22bd06e0c0c4e51 *R/sm_pointplot.R
 d29ed4ffa32e678846023965a97f6ab3 *R/sm_power.R
-057dc1fc0747dbfa1227832c4f101174 *R/sm_put_together.R
+921bafeab564500802f5f7563f940228 *R/sm_put_together.R
 42ffd2a1ebe4c78818446e0e0216679b *R/sm_raincloud.R
 6d85fc45dc58ce141abcc6d200696ace *R/sm_slope.R
 a7376e48156b67e186d9ad907822fbf6 *R/sm_slope_all.R
@@ -46,7 +46,8 @@ a70ffc6bc9f8f1aedb20d06033ad1243 *R/sm_statCorr.R
 7a06c89a8f6903d78b1015ac98376779 *R/sm_stdErr.R
 26f0149c33539f6f824cf5e58e0c8997 *R/sm_vgrid.R
 92bee975982e574ccb1632b60878aae5 *R/sm_violin.R
-8a54d02af1da86833f1381e6980cd9e5 *README.md
+f05ddd8a15c04d964d9a00aba497d899 *README.md
+cf63c747ed5efc777ca962a2dc580261 *man/figures/logo.png
 fa8e4183fc0e683fb7880e764d1314e1 *man/sm_add_arrow.Rd
 4e5fca83f9d57d5c7fadbf2a5b867338 *man/sm_add_legend.Rd
 8584700af02cebcd454d214a4c84acfd *man/sm_add_line.Rd
