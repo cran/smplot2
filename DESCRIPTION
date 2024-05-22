@@ -1,7 +1,7 @@
 Package: smplot2
 Type: Package
 Title: Creating and Annotating a Composite Plot in 'ggplot2'
-Version: 0.2.1
+Version: 0.2.2
 Authors@R: 
     person(
       given = "Seung Hyun (Sam)",
@@ -19,7 +19,7 @@ Imports: ggplot2, ggpubr, cowplot, tibble, dplyr, gghalves, utils, pwr,
 URL: https://smin95.github.io/dataviz/
 BugReports: https://github.com/smin95/smplot2/issues
 NeedsCompilation: no
-Packaged: 2024-04-28 02:52:26 UTC; XPS
+Packaged: 2024-05-22 06:57:11 UTC; XPS
 Author: Seung Hyun (Sam) Min [aut, cre]
 Repository: CRAN
-Date/Publication: 2024-04-28 03:20:03 UTC
+Date/Publication: 2024-05-22 07:10:03 UTC

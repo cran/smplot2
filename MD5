@@ -1,9 +1,13 @@
-8a8b9895ffcc2946127ea297ff019ba0 *DESCRIPTION
-87a39288c5842468167a31449b640634 *NAMESPACE
+20d1a3d941a10dd0b93c35499ce86f9d *DESCRIPTION
+b9886e5b5a7cc086c83aacd38e5ab70f *NAMESPACE
 fb06a6a9967a742583b5fa0e61d4f1fa *NEWS.md
 f038078e2cb3efbdb412dfd39a91571b *R/attach.R
+b26be3829bb2dce4d2317625dec90d14 *R/sm_add_arrow.R
 a53e4aefb73f9a6474b0209ca990445a *R/sm_add_legend.R
+4201381e7de468e3b8bc16a217103a75 *R/sm_add_line.R
 f885b4ff300390a1028153ebe3e1fd6e *R/sm_add_point.R
+ab316459b6d24b2d50d35ba24724ff8f *R/sm_add_polygon.R
+e3cb5c93440699ba526a0a10cb2c4d5c *R/sm_add_rect.R
 41136edcadc246104dc4484c77d92e86 *R/sm_add_text.R
 d58720341c5b1f94c5e8acc3fc63401d *R/sm_auc.R
 27eaf65b36b9f9ba3fe668d7682df80b *R/sm_auc_all.R
@@ -17,7 +21,7 @@ c046d7131cbba286da96c73abc1ad367 *R/sm_common_axis.R
 0167d4131dfb6528c7211ab189471888 *R/sm_common_legend.R
 e80ba3f57c62c075ab4db2d6a4ecf26f *R/sm_common_title.R
 a96b3cf0314844d1813872da1de1fce3 *R/sm_common_xlabel.R
-e7981f6b5fc9361d7e95ba334f2a5927 *R/sm_common_ylabel.R
+3f02c764c414f9463fcd3b446418adfb *R/sm_common_ylabel.R
 9359aa82b2c0e82a046ae17f32825e6e *R/sm_corr_avgErr.R
 8200b6bb051833bb824ad4ea6bf81e7d *R/sm_effsize.R
 990c02d8121b652ee0a5366d48951171 *R/sm_forest2.R
@@ -32,7 +36,7 @@ ed9e14928fdf8894126dacfb7e957214 *R/sm_palette.R
 6ac8b96a7929cb63b8ecf19771148f36 *R/sm_plot_clean.R
 7511babe62ac95e3b22bd06e0c0c4e51 *R/sm_pointplot.R
 d29ed4ffa32e678846023965a97f6ab3 *R/sm_power.R
-5fe33b8da3e2b4cfa9f391c23d2291e7 *R/sm_put_together.R
+cad1b935fcef57267a818198288910dc *R/sm_put_together.R
 42ffd2a1ebe4c78818446e0e0216679b *R/sm_raincloud.R
 6d85fc45dc58ce141abcc6d200696ace *R/sm_slope.R
 20b6c6d7320f7213347e34ad3d86cd73 *R/sm_slope_all.R
@@ -44,8 +48,12 @@ a70ffc6bc9f8f1aedb20d06033ad1243 *R/sm_statCorr.R
 92bee975982e574ccb1632b60878aae5 *R/sm_violin.R
 f05ddd8a15c04d964d9a00aba497d899 *README.md
 cf63c747ed5efc777ca962a2dc580261 *man/figures/logo.png
+bbf7957c627674867289821cdaeb6967 *man/sm_add_arrow.Rd
 4e5fca83f9d57d5c7fadbf2a5b867338 *man/sm_add_legend.Rd
+ce8891c301534c94552091bd25672013 *man/sm_add_line.Rd
 9f6f0f2fb4aac09d4bb64f92a3c6a489 *man/sm_add_point.Rd
+ef32adb20a346d4f8c636c94907b3198 *man/sm_add_polygon.Rd
+34a695f294bc7fa2f6096e50ac05c3eb *man/sm_add_rect.Rd
 1be9c904491e703333978dd4b53f33d3 *man/sm_add_text.Rd
 2ec26f3925902d121d32493222ca42e7 *man/sm_auc.Rd
 682987523c483ebd50bdde1e08fbe273 *man/sm_auc_all.Rd
@@ -59,7 +67,7 @@ c1125b8cf2305b22e82f42ed3e54b742 *man/sm_color.Rd
 0805b96c91ed4ab15d3b62e412e95bce *man/sm_common_legend.Rd
 385ff7080f2f3e27afee71bf007143cd *man/sm_common_title.Rd
 e80e43c4c43fe3c7bcd013f224ccda0c *man/sm_common_xlabel.Rd
-45074caa334588144f2801fee7252197 *man/sm_common_ylabel.Rd
+59860891bf6bd2edc2f61066b89ff189 *man/sm_common_ylabel.Rd
 82dfa186a523df0593b96fb9aaaf7d13 *man/sm_corr_avgErr.Rd
 52590ca38ae813be794c865f1f5d68b5 *man/sm_effsize.Rd
 45e4abc343a31134d2eb399e2fe25b12 *man/sm_forest.Rd
@@ -74,7 +82,7 @@ be63b87e8d7ded70d7d0c85ec6a49df4 *man/sm_panel_label.Rd
 b44ad499c7155eeed0c13129c0f25de5 *man/sm_plot_clean.Rd
 244d8a0b3ffe4147e43f0e17f3d662db *man/sm_pointplot.Rd
 54b49dbf8e5f40941586c008143641ef *man/sm_power.Rd
-912b30519ddac8d3fba0e21e9ed45294 *man/sm_put_together.Rd
+811582f9e33b89cdbc333b0c2633da2b *man/sm_put_together.Rd
 502523a91d8c7f99302552b3ddab5311 *man/sm_raincloud.Rd
 31132e9da8e7e906245fa4b9196756c3 *man/sm_slope.Rd
 c95bfbbe505bccb4dd40c5c4372bd591 *man/sm_slope_all.Rd
