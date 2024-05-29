@@ -1,7 +1,8 @@
 Package: smplot2
 Type: Package
-Title: Creating and Annotating a Composite Plot in 'ggplot2'
-Version: 0.2.2
+Title: Creating Standalone and Composite Plots in 'ggplot2' for
+        Publications
+Version: 0.2.3
 Authors@R: 
     person(
       given = "Seung Hyun (Sam)",
@@ -14,12 +15,13 @@ Description: Provides functions for creating and annotating a composite plot in 
 Encoding: UTF-8
 RoxygenNote: 7.3.1
 License: GPL-2
-Imports: ggplot2, ggpubr, cowplot, tibble, dplyr, gghalves, utils, pwr,
-        sdamr, stats, Hmisc, zoo, patchwork
+Depends: R (>= 3.4.0)
+Imports: ggplot2, graphics, ggpubr, cowplot, rlang, tibble, dplyr,
+        grid, utils, pwr, stats, Hmisc, zoo, patchwork
 URL: https://smin95.github.io/dataviz/
 BugReports: https://github.com/smin95/smplot2/issues
 NeedsCompilation: no
-Packaged: 2024-05-22 06:57:11 UTC; XPS
+Packaged: 2024-05-29 21:11:56 UTC; XPS
 Author: Seung Hyun (Sam) Min [aut, cre]
 Repository: CRAN
-Date/Publication: 2024-05-22 07:10:03 UTC
+Date/Publication: 2024-05-29 21:30:02 UTC

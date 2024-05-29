@@ -16,13 +16,14 @@ sm_put_together(
   ylabel2,
   tickRatio,
   panel_scale = 0.9,
-  wRatio = 1.1,
-  hRatio = 1.1,
+  wRatio,
+  hRatio,
   hmargin = 0,
   wmargin = 0,
   remove_ticks = "some",
-  wRatio2 = 1.1,
-  hRatio2 = 1.1
+  wRatio2,
+  hRatio2,
+  labelRatio = 1
 )
 }
 \arguments{
@@ -30,13 +31,16 @@ sm_put_together(
 that are to be combined into one figure.}
 
 \item{title}{Title layer that will determine the main title of the combined plot.
-This is created using sm_common_title(). Optional argument.}
+This is created using sm_common_title(). Optional argument.
+Users can also supply character string here instead.}
 
 \item{xlabel}{xlabel layer that will determine the label of the combined plot's x-axis.
-This is created using sm_common_xlabel(). Optional argument.}
+This is created using sm_common_xlabel(). Optional argument.
+Users can also supply character string here instead.}
 
 \item{ylabel}{ylabel layer that will determine the label of the combined plot's y-axis.
-This is created using sm_common_ylabel(). Optional argument.}
+This is created using sm_common_ylabel(). Optional argument.
+Users can also supply character string here instead.}
 
 \item{legend}{ggplot() layer that has legend. Optional argument.}
 
@@ -45,25 +49,29 @@ This is created using sm_common_ylabel(). Optional argument.}
 \item{nrow}{Number of rows in the combined plot}
 
 \item{xlabel2}{2nd xlabel layer that will determine the label of the combined plot's secondary x-axis.
-This is created using sm_common_xlabel(). Optional argument.}
+This is created using sm_common_xlabel(). Optional argument.
+Users can also supply character string here instead.}
 
 \item{ylabel2}{2nd ylabel layer that will determine the label of the combined plot's y-axis.
-This is created using sm_common_ylabel(). Optional argument.}
+This is created using sm_common_ylabel(). Optional argument.
+Users can also supply character string here instead.}
 
 \item{tickRatio}{Relative size of the ticks to the default aesthetics of the thematic functions (ex. sm_hgrid()).
-If there are more rows or columns, please increase the tickRatio (1.4 - 1.8).}
+By default, it adjusts tickRatio based on the given plot. But this
+can be overwritten if the input is supplied (ex. try 1.4 to begin with). FOr example, 1.4x means that
+it is 1.4x larger than the tick size of a single given plot.}
 
 \item{panel_scale}{Scale of the panel. Default is set to 0.9 to reduce empty space
 within and around each panel. The user can set to a value from 0 to 1 to
 see what happens to the spacing within each panel and between panels.}
 
 \item{wRatio}{This adjusts the ratio of the width of the first column to those of other columns.
-By default, it is set to be 1.1x wider than that of other columns. If the value
-is larger than 1, then it will be wider than that of other columns. Users are encouraged
+By default, it adjusts wRatio based on the given plot. However, this can be overwritten if the input is supplied.
+If the value is larger than 1, then it will be wider than that of other columns. Users are encouraged
 to adjust this value because different computers can show different looking outputs.}
 
 \item{hRatio}{This adjusts the ratio of the height of the last row to those of other rows
-By default, it is set to be 1.1x taller than that of other columns. If the value
+By default, it adjusts hRatio based on the given plot. However, this can be overwritten if the input is supplied. If the value
 is larger than 1, then it will be taller than that of other columns. Users are encouraged
 to adjust this value because different computers can show different looking outputs.}
 
@@ -80,20 +88,33 @@ If set to 'all', then all panels' ticks will be removed.
 If set to 'none', then all panels' ticks will be kept.}
 
 \item{wRatio2}{This adjusts the ratio of the width of the last column to those of other columns.
-By default, if ylabel2 is provided, it is set to be 1.1x wider than that of other columns. If the value
-is larger than 1, then it will be wider than that of other columns. Users are encouraged
+By default, it adjusts wRatio2 based on the given plot. However, this can be overwritten if the input is supplied.
+If the value is larger than 1, then it will be wider than that of other columns. Users are encouraged
 to adjust this value because different computers can show different looking outputs.}
 
 \item{hRatio2}{This adjusts the ratio of the height of the first row to those of other rows
-By default, if xlabel2 is provided, it is set to be 1.1x taller than that of other columns. If the value
+By default, it adjusts hRatio2 based on the given plot. However, this can be overwritten if the input is supplied.  If the value
 is larger than 1, then it will be taller than that of other columns. Users are encouraged
 to adjust this value because different computers can show different looking outputs.}
+
+\item{labelRatio}{Relative text size of the labels, such as title, xlabel, ylabel, xlabel2 and ylabel2 to its default font size (optimized).
+This input only changes the size if the inputs are provided as character strings. The default value is 1. If
+this input is larger than 1.1, then the text size will be larger 1.1x than the default size, which itself
+is optimized based on the plot's given layout and other information.}
 }
 \value{
 Returns a combined figure.
 }
 \description{
-Combining figures together
+This function works best if all_plots argument (the list input) contains plots
+that have tick labels on both x and y axes; this information will be used to
+optimize the layout of the composite figure.
+}
+\details{
+The inputs for the axis labels can be created with sm_common_xlabel(), sm_common_ylabel()
+and sm_common_title(). Alternatively, users can supply character strings directly
+to sm_put_together() instead. However, this option is not flexible but the function
+tries its best to find the optimal size and location given the plot information.
 }
 \examples{
 library(smplot2)
@@ -113,5 +134,8 @@ ylabel <- sm_common_ylabel('My y-axis')
 
 sm_put_together(list(p1,p2), title=title, xlabel=xlabel,
                 ylabel=ylabel, ncol=2,nrow=1)
+
+sm_put_together(list(p1,p2), title='My title', xlabel='My x-axis',
+                ylabel='My y-axis', labelRatio = 1.1, ncol=2,nrow=1)
 
 }

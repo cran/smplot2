@@ -8,17 +8,18 @@ sm_slope(
   ...,
   labels,
   group,
-  line.params = list(color = "gray53", size = 0.4, alpha = 0.4),
+  line.params = list(color = "gray53", linewidth = 0.4, alpha = 0.4),
   point.params = list(size = 2.5, shape = 21, color = "white"),
-  avgLine.params = list(),
-  avgPoint.params = list(),
-  err.params = list(),
+  avgLine.params = list(linewidth = 1),
+  avgPoint.params = list(size = 4),
+  err.params = list(linewidth = 1),
   xTick.params = list(position = "top", expand = c(0.17, 0.1), drop = FALSE),
   errorbar_type = "sd",
   many_groups = FALSE,
   show_err = FALSE,
   show_mean = FALSE,
-  legends = FALSE
+  legends = FALSE,
+  forget = FALSE
 )
 }
 \arguments{
@@ -62,20 +63,21 @@ If the average plot is not needed, the input should be FALSE.}
 
 \item{legends}{If the legend needs to be displayed, the input should be TRUE.
 If the legend is not needed, the input should be FALSE.}
+
+\item{forget}{Forget the defaults when list() is called for a specific parameter (ex. point.params).
+Set to TRUE when when users want to map aesthetics to different groups more flexibly..
+Set to FALSE by default.}
 }
 \value{
-Returns a double vector output representing the slope from linear regression.
+Returns a slope chart which is a ggplot2 object.
 }
 \description{
 This function generates a slope chart.
 This is very useful for comparing the effect between two time points.
 
-For this function to work properly,
-ggplot()'s mapping has to be quite specific.
-1. Each observation has to be grouped.
+ggplot()'s mapping has to be quite specific: each observation has to be grouped.
 
-With smplot2, average plot can be displayed along with error bars, both of which
-are optional.
+Error bar types can be specified (ci, sd, and se).
 }
 \examples{
 library(ggplot2)
@@ -100,7 +102,7 @@ ggplot(data = df, aes(x = Day, y = Value, fill = Day)) +
                              alpha = 0.3),
           avgPoint.params = list(color='transparent', shape = 21,
                                  size = 4, fill = sm_color('blue')),
-          avgLine.params = list(color = sm_color('blue'), size = 1),
+          avgLine.params = list(color = sm_color('blue'), linewidth = 1),
           show_mean = TRUE)
 
 

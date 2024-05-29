@@ -58,12 +58,15 @@
 #' @param seed
 #' Random seed
 #'
+#' @param forget
+#' Forget the defaults when list() is called for a specific parameter (ex. point.params).
+#' Set to TRUE when when users want to map aesthetics to different groups more flexibly..
+#' Set to FALSE by default.
+#'
 #' @return Returns a raincloud plot generated using ggplot2.
 #' @import ggplot2 cowplot Hmisc
 #' @importFrom stats sd
 #' @importFrom utils modifyList
-#' @importFrom gghalves geom_half_boxplot geom_half_violin
-#' @importFrom sdamr position_jitternudge
 #' @export
 #'
 #' @examples
@@ -98,7 +101,8 @@ sm_raincloud <- function(...,
                          points = TRUE,
                          borders = TRUE,
                          legends = FALSE,
-                         seed = NULL) {
+                         seed = NULL,
+                         forget = FALSE) {
 
   if (length(seed)) set.seed(seed)
   if (which_side == 'right') {
@@ -107,11 +111,31 @@ sm_raincloud <- function(...,
     which_side <- 'l'
   }
 
-
   params <- list(...)
-  point.params <- modifyList(params, point.params)
-  boxplot.params <- modifyList(params, boxplot.params)
-  violin.params <- modifyList(params, violin.params)
+
+
+
+  if (forget == FALSE) {
+    boxplot.params0 = list()
+    boxplot.params0 <- modifyList(boxplot.params0, params)
+
+    violin.params0 = list(alpha = 0.3, color = 'transparent')
+    violin.params0 <- modifyList(violin.params0, params)
+
+    point.params0 = list(alpha = 1, size = 3, shape = 21, color = 'transparent')
+    point.params0 <- modifyList(point.params0, params)
+
+    point.params <- modifyList(point.params0, point.params)
+    boxplot.params <- modifyList(boxplot.params0, boxplot.params)
+    violin.params <- modifyList(violin.params0, violin.params)
+
+  } else if (forget == TRUE) {
+    point.params <- modifyList(params, point.params)
+    boxplot.params <- modifyList(params, boxplot.params)
+    violin.params <- modifyList(params, violin.params)
+
+  }
+
 
 
   if (which_side == 'r') {
@@ -141,7 +165,7 @@ sm_raincloud <- function(...,
   }
 
   pointPlot <- do.call('geom_point',
-                       modifyList(list(position = sdamr::position_jitternudge(jitter.width=point_jitter_width,
+                       modifyList(list(position = position_jitternudge(jitter.width=point_jitter_width,
                                                                               jitter.height=0,
                                                                               nudge.x = position_nudge_vector[1])),
                                   point.params))
