@@ -35,5 +35,5 @@ Common y-axis label (title) for combined subplots
 }
 \examples{
 library(smplot2)
-sm_common_ylabel('My y-axis')
+sm_common_ylabel("My y-axis")
 }

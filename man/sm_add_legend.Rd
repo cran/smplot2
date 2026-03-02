@@ -50,19 +50,27 @@ Adding a common legend on a combined figure
 library(ggplot2)
 library(smplot2)
 
-ggplot(data = mtcars, mapping = aes(x = drat, y = mpg,
-fill = as.factor(cyl))) +
- geom_point(shape = 21, color = 'white',
-            size = 3) +
- sm_classic(legends=FALSE) -> p1
+ggplot(data = mtcars, mapping = aes(
+  x = drat, y = mpg,
+  fill = as.factor(cyl)
+)) +
+  geom_point(
+    shape = 21, color = "white",
+    size = 3
+  ) +
+  sm_classic(legends = FALSE) -> p1
 
-ggplot(data = mtcars, mapping = aes(x = drat, y = mpg,
-                                    fill = as.factor(cyl))) +
- geom_point(shape = 21, color = 'white',
-            size = 3) +
- sm_hvgrid(legends=FALSE) -> p2
+ggplot(data = mtcars, mapping = aes(
+  x = drat, y = mpg,
+  fill = as.factor(cyl)
+)) +
+  geom_point(
+    shape = 21, color = "white",
+    size = 3
+  ) +
+  sm_hvgrid(legends = FALSE) -> p2
 
-combined_fig <- sm_put_together(list(p1,p2), ncol=2,nrow=1)
+combined_fig <- sm_put_together(list(p1, p2), ncol = 2, nrow = 1)
 sm_add_legend(combined_fig, x = 0.1, y = 0.1, sampleplot = p1)
 
 }

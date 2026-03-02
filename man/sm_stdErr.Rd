@@ -17,8 +17,6 @@ Standard error
 }
 \examples{
 library(smplot2)
-sm_stdErr(rnorm(10,0,1))
-
-
+sm_stdErr(rnorm(10, 0, 1))
 
 }

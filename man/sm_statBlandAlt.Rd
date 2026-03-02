@@ -41,7 +41,7 @@ library(tibble)
 
 first <- rnorm(20)
 second <- rnorm(20)
-df <- as_tibble(cbind(first,second)) # requires library(tidyverse)
+df <- as_tibble(cbind(first, second)) # requires library(tidyverse)
 sm_statBlandAlt(df$first, df$second)
 
 }

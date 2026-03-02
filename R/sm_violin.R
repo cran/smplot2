@@ -175,7 +175,7 @@ sm_violin <- function(...,
         fun.data = mean_sdl,
         fun.args = list(mult = 1),
         geom = "pointrange",
-        fatten = point.params$size * 1.3
+        size = point.params$size * 1.3
       ), err.params)
     )
   } else if (errorbar_type == "ci") {

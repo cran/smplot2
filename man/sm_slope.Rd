@@ -128,16 +128,16 @@ library(ggplot2)
 library(smplot2)
 
 set.seed(1) # generate random data
-day1 = rnorm(16,2,1)
-day2 = rnorm(16,5,1)
-Subject <- rep(paste0('S',seq(1:16)), 2)
-Data <- data.frame(Value = matrix(c(day1,day2),ncol=1))
-Day <- rep(c('Day 1', 'Day 2'), each = length(day1))
+day1 <- rnorm(16, 2, 1)
+day2 <- rnorm(16, 5, 1)
+Subject <- rep(paste0("S", seq(1:16)), 2)
+Data <- data.frame(Value = matrix(c(day1, day2), ncol = 1))
+Day <- rep(c("Day 1", "Day 2"), each = length(day1))
 df <- cbind(Subject, Data, Day)
 
-ggplot(data=df, aes(x = Day, y = Value, fill = Day)) +
- sm_slope(labels = c('Day 1', 'Day 2'), group = Subject) +
- scale_fill_manual(values=  sm_color('blue','orange'))
+ggplot(data = df, aes(x = Day, y = Value, fill = Day)) +
+  sm_slope(labels = c("Day 1", "Day 2"), group = Subject) +
+  scale_fill_manual(values = sm_color("blue", "orange"))
 ggplot(data = df, aes(x = Day, y = Value, fill = Day)) +
  sm_slope(labels = c('Day 1','Day 2'),group = Subject,
           point.params = list(alpha = 0.3, size = 2.5, color = 'white',

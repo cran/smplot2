@@ -23,7 +23,7 @@ This theme has vertical and horizontal grids.
 library(ggplot2)
 library(smplot2)
 ggplot(data = mpg) +
-geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
-sm_hvgrid_minor()
+  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
+  sm_hvgrid_minor()
 
 }

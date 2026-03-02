@@ -79,18 +79,20 @@ Forest plot
 library(smplot2)
 library(ggplot2)
 
-day1 = rnorm(20,0,1)
-day2 = rnorm(20,5,1)
-day3 = rnorm(20,6,1.5)
-day4 = rnorm(20,7,2)
-Subject <- rep(paste0('S',seq(1:20)), 4)
-Data <- data.frame(Value = matrix(c(day1,day2,day3,day4),ncol=1))
-Day <- rep(c('Day 1', 'Day 2', 'Day 3', 'Day 4'), each = length(day1))
+day1 <- rnorm(20, 0, 1)
+day2 <- rnorm(20, 5, 1)
+day3 <- rnorm(20, 6, 1.5)
+day4 <- rnorm(20, 7, 2)
+Subject <- rep(paste0("S", seq(1:20)), 4)
+Data <- data.frame(Value = matrix(c(day1, day2, day3, day4), ncol = 1))
+Day <- rep(c("Day 1", "Day 2", "Day 3", "Day 4"), each = length(day1))
 df2 <- cbind(Subject, Data, Day)
 
 ggplot(data = df2, aes(x = Value, y = Day, color = Day, fill = Day)) +
- sm_forest(sep_level = 2, point_jitter_width = .12,
-           errorbar_type = 'ci',
-           point.params = list(alpha=0.2)) +
+  sm_forest(
+    sep_level = 2, point_jitter_width = .12,
+    errorbar_type = "ci",
+    point.params = list(alpha = 0.2)
+  ) +
   scale_color_manual(values = sm_palette(4))
 }

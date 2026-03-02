@@ -55,14 +55,18 @@ library(ggplot2)
 library(smplot2)
 
 ggplot(data = mtcars, mapping = aes(x = drat, y = mpg)) +
-geom_point(shape = 21, fill = '#0f993d', color = 'white',
-          size = 3) -> p1
+  geom_point(
+    shape = 21, fill = "#0f993d", color = "white",
+    size = 3
+  ) -> p1
 
 ggplot(data = mtcars, mapping = aes(x = drat, y = mpg)) +
- geom_point(shape = 21, fill = '#0f993d', color = 'white', size = 3) +
- sm_hvgrid() -> p2
+  geom_point(shape = 21, fill = "#0f993d", color = "white", size = 3) +
+  sm_hvgrid() -> p2
 
-sm_panel_label(list(p1,p2), x = 0.1, y = 0.9,
-              panel_tag ='1', panel_pretag = 'S', text_size = 4, text_color = 'black')
+sm_panel_label(list(p1, p2),
+  x = 0.1, y = 0.9,
+  panel_tag = "1", panel_pretag = "S", text_size = 4, text_color = "black"
+)
 
 }

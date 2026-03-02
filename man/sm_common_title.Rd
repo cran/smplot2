@@ -26,6 +26,6 @@ Common title for combined subplots
 }
 \examples{
 library(smplot2)
-sm_common_title('My title')
+sm_common_title("My title")
 
 }

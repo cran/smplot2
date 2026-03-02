@@ -120,19 +120,18 @@ library(ggplot2)
 library(smplot2)
 
 set.seed(2) # generate random data
-day1 = rnorm(20,0,1)
-day2 = rnorm(20,5,1)
-day3 = rnorm(20,6,1.5)
-day4 = rnorm(20,7,2)
-Subject <- rep(paste0('S',seq(1:20)), 4)
-Data <- data.frame(Value = matrix(c(day1,day2,day3,day4),ncol=1))
-Day <- rep(c('Day 1', 'Day 2', 'Day 3', 'Day 4'), each = length(day1))
+day1 <- rnorm(20, 0, 1)
+day2 <- rnorm(20, 5, 1)
+day3 <- rnorm(20, 6, 1.5)
+day4 <- rnorm(20, 7, 2)
+Subject <- rep(paste0("S", seq(1:20)), 4)
+Data <- data.frame(Value = matrix(c(day1, day2, day3, day4), ncol = 1))
+Day <- rep(c("Day 1", "Day 2", "Day 3", "Day 4"), each = length(day1))
 df2 <- cbind(Subject, Data, Day)
 
-ggplot(data=df2, aes(x = Day, y = Value, color = Day, fill = Day)) +
-sm_raincloud() +
- xlab('Day')  +
- scale_fill_manual(values = sm_palette(4))
-
+ggplot(data = df2, aes(x = Day, y = Value, color = Day, fill = Day)) +
+  sm_raincloud() +
+  xlab("Day") +
+  scale_fill_manual(values = sm_palette(4))
 
 }

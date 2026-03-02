@@ -24,8 +24,8 @@ This function computes the confidence interval.
 library(smplot2)
 set.seed(1)
 
-a <- rnorm(100,1,1)
+a <- rnorm(100, 1, 1)
 sm_ci(a)
-sm_ci(a, low=FALSE)
+sm_ci(a, low = FALSE)
 
 }

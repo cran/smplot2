@@ -44,10 +44,14 @@ Creating a common legend for subplots on a separate panel
 \examples{
 library(ggplot2)
 library(smplot2)
-ggplot(data = mtcars, mapping = aes(x = drat, y = mpg,
-fill = as.factor(cyl))) +
- geom_point(shape = 21, color = 'white', size = 3) +
- sm_common_legend(x = .5, y = 0.5 , direction='horizontal',
-                  border=FALSE)
+ggplot(data = mtcars, mapping = aes(
+  x = drat, y = mpg,
+  fill = as.factor(cyl)
+)) +
+  geom_point(shape = 21, color = "white", size = 3) +
+  sm_common_legend(
+    x = .5, y = 0.5, direction = "horizontal",
+    border = FALSE
+  )
 
 }

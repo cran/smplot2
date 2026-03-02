@@ -24,7 +24,7 @@ It returns up to 20 different colors with a high visibility.
 }
 \examples{
 library(smplot2)
-sm_color('crimson')
+sm_color("crimson")
 
-sm_color('crimson', 'green', 'blue')
+sm_color("crimson", "green", "blue")
 }

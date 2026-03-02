@@ -42,17 +42,17 @@ The user can use lm() from base R to compute the slope as well.
 
 library(smplot2)
 set.seed(1) # generate random data
-day1 = rnorm(16,0,1)
-day2 = rnorm(16,5,1)
-Subject <- rep(paste0('S',seq(1:16)), 2)
-Value <- data.frame(Value = matrix(c(day1,day2),ncol=1))
-Day <- rep(c(1,2), each = length(day1))
-Condition <- rep('Control', length(day1)*2)
+day1 <- rnorm(16, 0, 1)
+day2 <- rnorm(16, 5, 1)
+Subject <- rep(paste0("S", seq(1:16)), 2)
+Value <- data.frame(Value = matrix(c(day1, day2), ncol = 1))
+Day <- rep(c(1, 2), each = length(day1))
+Condition <- rep("Control", length(day1) * 2)
 df <- cbind(Subject, Value, Condition, Day)
 
-sm_slope_all(data = df, subjects = 'Subject',values = 'Value',
-conditions = 'Condition',x = 'Day')
-
-
+sm_slope_all(
+  data = df, subjects = "Subject", values = "Value",
+  conditions = "Condition", x = "Day"
+)
 
 }

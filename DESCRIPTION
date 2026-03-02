@@ -2,7 +2,7 @@ Package: smplot2
 Type: Package
 Title: Create Standalone and Composite Plots in 'ggplot2' for
         Publications
-Version: 0.2.5
+Version: 0.2.6
 Authors@R: 
     person(
       given = "Seung Hyun",
@@ -21,7 +21,7 @@ Imports: ggplot2, graphics, ggpubr, cowplot, rlang, tibble, dplyr,
 URL: https://smin95.github.io/dataviz/
 BugReports: https://github.com/smin95/smplot2/issues
 NeedsCompilation: no
-Packaged: 2025-01-26 01:49:22 UTC; sammi
+Packaged: 2026-03-02 01:12:47 UTC; sammi
 Author: Seung Hyun Min [aut, cre]
 Repository: CRAN
-Date/Publication: 2025-01-26 09:50:02 UTC
+Date/Publication: 2026-03-02 06:10:18 UTC

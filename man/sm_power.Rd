@@ -27,8 +27,8 @@ Post-hoc power analysis using two-sample or paired t-test
 }
 \examples{
 library(smplot2)
-group1 <- rnorm(10,0,1)
-group2 <- rnorm(10,1,1)
+group1 <- rnorm(10, 0, 1)
+group2 <- rnorm(10, 1, 1)
 sm_power(group1, group2, paired = TRUE)
 
 }

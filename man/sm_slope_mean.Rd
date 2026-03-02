@@ -104,14 +104,16 @@ library(ggplot2)
 library(smplot2)
 
 set.seed(1) # generate random data
-day1 = rnorm(16,2,1)
-day2 = rnorm(16,5,1)
-Subject <- rep(paste0('S',seq(1:16)), 2)
-Data <- data.frame(Value = matrix(c(day1,day2),ncol=1))
-Day <- rep(c('Day 1', 'Day 2'), each = length(day1))
+day1 <- rnorm(16, 2, 1)
+day2 <- rnorm(16, 5, 1)
+Subject <- rep(paste0("S", seq(1:16)), 2)
+Data <- data.frame(Value = matrix(c(day1, day2), ncol = 1))
+Day <- rep(c("Day 1", "Day 2"), each = length(day1))
 df <- cbind(Subject, Data, Day)
 
-ggplot(data=df, aes(x = Day, y = Value)) +
- sm_slope_mean(labels = c('Day 1', 'Day 2'), group = Subject, back_alpha = .3,
-main_color = sm_color('green'))
+ggplot(data = df, aes(x = Day, y = Value)) +
+  sm_slope_mean(
+    labels = c("Day 1", "Day 2"), group = Subject, back_alpha = .3,
+    main_color = sm_color("green")
+  )
 }

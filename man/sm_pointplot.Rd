@@ -68,6 +68,6 @@ uniquely shadow, which is a faint display of individual points behind the mean.
 library(smplot2)
 library(ggplot2)
 ggplot(data = mtcars, mapping = aes(x = cyl, y = mpg)) +
-sm_pointplot()
+  sm_pointplot()
 
 }

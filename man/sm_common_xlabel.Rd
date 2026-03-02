@@ -26,5 +26,5 @@ Common x-axis label (title) for combined subplots
 }
 \examples{
 library(smplot2)
-sm_common_xlabel('My x-axis')
+sm_common_xlabel("My x-axis")
 }

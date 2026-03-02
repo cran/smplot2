@@ -24,7 +24,7 @@ sm_corr_theme() is exactly the same as sm_hvgrid().
 library(ggplot2)
 library(smplot2)
 ggplot(data = mpg) +
-geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
-sm_hvgrid()
+  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
+  sm_hvgrid()
 
 }

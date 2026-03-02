@@ -34,7 +34,7 @@ sm_hgrid <- function(legends = FALSE, borders = TRUE) {
           panel.grid.minor.x = ggplot2::element_blank(),
           panel.grid.major.x = ggplot2::element_blank(),
           panel.grid.minor.y = ggplot2::element_blank(),
-          panel.grid.major.y = ggplot2::element_line(size = 0.5),
+          panel.grid.major.y = ggplot2::element_line(linewidth = 0.5),
           axis.text = ggplot2::element_text(size = ggplot2::rel(.85), color = "black"),
           axis.title.y = ggplot2::element_text(size = ggplot2::rel(.85), color = "black"),
           axis.title.x = ggplot2::element_text(
@@ -55,7 +55,7 @@ sm_hgrid <- function(legends = FALSE, borders = TRUE) {
         ggplot2::theme(
           panel.grid.minor.x = ggplot2::element_blank(),
           panel.grid.major.x = ggplot2::element_blank(), panel.grid.minor.y = element_blank(),
-          panel.grid.major.y = ggplot2::element_line(size = 0.5),
+          panel.grid.major.y = ggplot2::element_line(linewidth = 0.5),
           axis.text = ggplot2::element_text(size = ggplot2::rel(1.2), color = "black"),
           axis.title.y = ggplot2::element_text(size = ggplot2::rel(1.2), color = "black"),
           axis.title.x = ggplot2::element_text(
@@ -75,7 +75,7 @@ sm_hgrid <- function(legends = FALSE, borders = TRUE) {
         ggplot2::theme(
           panel.grid.minor.x = ggplot2::element_blank(),
           panel.grid.major.x = ggplot2::element_blank(), panel.grid.minor.y = ggplot2::element_blank(),
-          panel.grid.major.y = ggplot2::element_line(size = 0.5),
+          panel.grid.major.y = ggplot2::element_line(linewidth = 0.5),
           axis.text = ggplot2::element_text(size = ggplot2::rel(.85), color = "black"),
           axis.title.y = ggplot2::element_text(size = ggplot2::rel(.85), color = "black"),
           axis.title.x = ggplot2::element_text(
@@ -96,7 +96,7 @@ sm_hgrid <- function(legends = FALSE, borders = TRUE) {
           panel.grid.minor.x = ggplot2::element_blank(),
           panel.grid.major.x = ggplot2::element_blank(),
           panel.grid.minor.y = ggplot2::element_blank(),
-          panel.grid.major.y = ggplot2::element_line(size = 0.5),
+          panel.grid.major.y = ggplot2::element_line(linewidth = 0.5),
           axis.text = ggplot2::element_text(size = ggplot2::rel(1.2), color = "black"),
           axis.title.y = ggplot2::element_text(size = ggplot2::rel(1.2), color = "black"),
           axis.title.x = ggplot2::element_text(

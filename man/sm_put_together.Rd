@@ -110,21 +110,27 @@ library(smplot2)
 library(ggplot2)
 
 ggplot(data = mtcars, mapping = aes(x = drat, y = mpg)) +
-geom_point(shape = 21, fill = '#0f993d', color = 'white',
-          size = 3) -> p1
+  geom_point(
+    shape = 21, fill = "#0f993d", color = "white",
+    size = 3
+  ) -> p1
 
 ggplot(data = mtcars, mapping = aes(x = drat, y = mpg)) +
-  geom_point(shape = 21, fill = '#0f993d', color = 'white', size = 3) +
+  geom_point(shape = 21, fill = "#0f993d", color = "white", size = 3) +
   sm_hvgrid() -> p2
 
-title <- sm_common_title('My title')
-xlabel <- sm_common_xlabel('My x-axis')
-ylabel <- sm_common_ylabel('My y-axis')
+title <- sm_common_title("My title")
+xlabel <- sm_common_xlabel("My x-axis")
+ylabel <- sm_common_ylabel("My y-axis")
 
-sm_put_together(list(p1,p2), title=title, xlabel=xlabel,
-                ylabel=ylabel, ncol=2,nrow=1)
+sm_put_together(list(p1, p2),
+  title = title, xlabel = xlabel,
+  ylabel = ylabel, ncol = 2, nrow = 1
+)
 
-sm_put_together(list(p1,p2), title='My title', xlabel='My x-axis',
-                ylabel='My y-axis', labelRatio = 1.1, ncol=2,nrow=1)
+sm_put_together(list(p1, p2),
+  title = "My title", xlabel = "My x-axis",
+  ylabel = "My y-axis", labelRatio = 1.1, ncol = 2, nrow = 1
+)
 
 }

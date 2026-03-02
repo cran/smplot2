@@ -45,7 +45,7 @@ library(tibble)
 
 first <- rnorm(20)
 second <- rnorm(20)
-df <- as_tibble(cbind(first,second))
+df <- as_tibble(cbind(first, second))
 sm_bland_altman(df$first, df$second)
 # when all 3 dashed lines are not shown, extend the range of the y-axis.
 

@@ -47,7 +47,9 @@ in the correlation plot
 library(smplot2)
 library(ggplot2)
 ggplot(data = mtcars, mapping = aes(x = drat, y = mpg)) +
-geom_point(shape = 21, size = 3) +
- sm_corr_avgErr(mtcars, drat,mpg, errorbar_type = 'se',
-                color = sm_color('red'))
+  geom_point(shape = 21, size = 3) +
+  sm_corr_avgErr(mtcars, drat, mpg,
+    errorbar_type = "se",
+    color = sm_color("red")
+  )
 }
